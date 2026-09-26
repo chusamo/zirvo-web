@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zirvo — AI communication & process automation</title>
+  <meta name="description" content="Zirvo is building AI that answers calls, handles WhatsApp and automates the processes that run your business. Coming soon.">
+  <meta name="theme-color" content="#0B0F1A">
+  <meta property="og:title" content="Zirvo — Coming soon">
+  <meta property="og:description" content="AI communication & process automation for businesses.">
+  <meta property="og:url" content="https://zirvo.ai">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%236366F1'/><path d='M20 20h24L20 44h24' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       BRAND COLORS — change these values to match your palette
+       ============================================================ */
+    :root {
+      --bg:        #0B0F1A;   /* page background */
+      --surface:   #131A2A;   /* cards / chips */
+      --primary:   #6366F1;   /* main brand color */
+      --accent:    #22D3EE;   /* secondary / glow */
+      --text:      #F1F5F9;   /* main text */
+      --muted:     #94A3B8;   /* secondary text */
+      --border:    rgba(255, 255, 255, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .glow { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+    .glow span {
+      position: absolute; border-radius: 50%;
+      filter: blur(90px); opacity: 0.45;
+      animation: float 18s ease-in-out infinite;
+    }
+    .glow span:nth-child(1) { width: 520px; height: 520px; background: var(--primary); top: -160px; left: -120px; }
+    .glow span:nth-child(2) { width: 420px; height: 420px; background: var(--accent); bottom: -140px; right: -100px; opacity: 0.3; animation-delay: -6s; }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50%      { transform: translate(40px, 30px) scale(1.08); }
+    }
+
+    .grid {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    }
+
+    header, main, footer { position: relative; z-index: 1; }
+
+    header { padding: 28px 24px; max-width: 1100px; width: 100%; margin: 0 auto; }
+
+    .logo {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-weight: 800; font-size: 22px; letter-spacing: -0.02em;
+      color: var(--text); text-decoration: none;
+    }
+    .logo-mark {
+      width: 34px; height: 34px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: grid; place-items: center;
+      box-shadow: 0 0 24px rgba(99, 102, 241, 0.5);
+    }
+
+    main {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center;
+      padding: 40px 24px 60px; max-width: 820px; margin: 0 auto; width: 100%;
+    }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 14px; border: 1px solid var(--border);
+      background: rgba(19, 26, 42, 0.7); backdrop-filter: blur(8px);
+      border-radius: 999px; font-size: 13px; font-weight: 500;
+      color: var(--muted); margin-bottom: 28px;
+    }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 10px var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 68px); font-weight: 800;
+      line-height: 1.05; letter-spacing: -0.035em; margin-bottom: 22px;
+    }
+    h1 .gradient {
+      background: linear-gradient(120deg, var(--primary), var(--accent));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+
+    .lead {
+      font-size: clamp(16px, 2.2vw, 19px); line-height: 1.6;
+      color: var(--muted); max-width: 600px; margin-bottom: 36px;
+    }
+
+    .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 40px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px; border-radius: 12px;
+      background: rgba(19, 26, 42, 0.8); border: 1px solid var(--border);
+      font-size: 14px; font-weight: 500;
+    }
+    .chip svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; }
+
+    .cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 28px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), #4F8BEF);
+      color: #fff; font-weight: 600; font-size: 15px; text-decoration: none;
+      box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.7);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -10px rgba(99, 102, 241, 0.85); }
+    .cta svg { width: 18px; height: 18px; }
+
+    .note { margin-top: 16px; font-size: 13px; color: var(--muted); }
+    .note a { color: var(--text); }
+
+    footer {
+      padding: 28px 24px; text-align: center; font-size: 13px;
+      color: var(--muted); border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 480px) {
+      .glow span:nth-child(1) { width: 320px; height: 320px; }
+      .glow span:nth-child(2) { width: 280px; height: 280px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .glow span, .dot { animation: none; }
+      .cta { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow" aria-hidden="true"><span></span><span></span></div>
+  <div class="grid" aria-hidden="true"></div>
+
+  <header>
+    <a href="/" class="logo" aria-label="Zirvo home">
+      <span class="logo-mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 6h12L6 18h12"/>
+        </svg>
+      </span>
+      Zirvo
+    </a>
+  </header>
+
+  <main>
+    <div class="badge"><span class="dot"></span>Coming soon</div>
+
+    <h1>AI that runs your<br><span class="gradient">conversations &amp; operations</span></h1>
+
+    <p class="lead">
+      Zirvo answers calls, handles WhatsApp and automates the processes that keep your business moving — so your team can focus on what matters.
+    </p>
+
+    <div class="chips">
+      <span class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        AI voice agents
+      </span>
+      <span class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        WhatsApp automation
+      </span>
+      <span class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Smart bookings
+      </span>
+      <span class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        Process automation
+      </span>
+    </div>
+
+    <a class="cta" href="mailto:hello@zirvo.ai?subject=Early%20access%20to%20Zirvo">
+      Get early access
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <p class="note">Or write to us at <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a></p>
+  </main>
+
+  <footer>
+    © <span id="year">2026</span> Zirvo · <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
