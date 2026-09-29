@@ -10,10 +10,14 @@
   <meta property="og:description" content="AI communication & process automation for businesses.">
   <meta property="og:url" content="https://zirvo.ai">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%236366F1'/><path d='M20 20h24L20 44h24' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    /* Self-hosted Inter — no requests to Google (GDPR-friendly) */
+    @font-face { font-family: 'Inter'; font-weight: 400; font-display: swap; src: url('fonts/inter-latin-400-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-weight: 500; font-display: swap; src: url('fonts/inter-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-weight: 600; font-display: swap; src: url('fonts/inter-latin-600-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-weight: 700; font-display: swap; src: url('fonts/inter-latin-700-normal.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-weight: 800; font-display: swap; src: url('fonts/inter-latin-800-normal.woff2') format('woff2'); }
+
     /* ============================================================
        BRAND COLORS — change these values to match your palette
        ============================================================ */
@@ -143,6 +147,7 @@
     }
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
+    footer .legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-bottom: 10px; }
 
     @media (max-width: 480px) {
       .glow span:nth-child(1) { width: 320px; height: 320px; }
@@ -204,9 +209,15 @@
     <p class="note">Or write to us at <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a></p>
   </main>
 
-<footer>
-  © <span id="year">2026</span> Zirvo OÜ · Registry code 17611162 · Estonia · <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a>
-</footer>
+  <footer>
+    <nav class="legal-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="refunds.html">Refund Policy</a>
+      <a href="legal-notice.html">Legal Notice</a>
+    </nav>
+    © <span id="year">2026</span> Zirvo OÜ · Registry code 17611162 · Estonia · <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
