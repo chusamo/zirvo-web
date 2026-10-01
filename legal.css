@@ -72,3 +72,9 @@ footer.site {
 footer.site a { color: var(--muted); text-decoration: none; }
 footer.site a:hover { color: var(--text); }
 footer.site nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-bottom: 10px; }
+
+main.legal code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em; padding: 1px 6px; border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border);
+}

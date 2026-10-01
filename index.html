@@ -139,6 +139,15 @@
     .cta svg { width: 18px; height: 18px; }
 
     .note { margin-top: 16px; font-size: 13px; color: var(--muted); }
+    .product {
+      margin-top: 28px; display: inline-flex; align-items: center; gap: 12px;
+      padding: 12px 16px; border-radius: 14px; text-decoration: none;
+      background: rgba(19, 26, 42, 0.85); border: 1px solid var(--border);
+      color: var(--muted); font-size: 14px; transition: border-color 0.2s ease;
+    }
+    .product strong { color: var(--text); font-weight: 600; }
+    .product svg { width: 16px; height: 16px; color: var(--accent); }
+    .product:hover { border-color: rgba(255, 255, 255, 0.2); }
     .note a { color: var(--text); }
 
     footer {
@@ -155,7 +164,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       .glow span, .dot { animation: none; }
-      .cta { transition: none; }
+      .cta, .product { transition: none; }
     }
   </style>
 </head>
@@ -207,10 +216,16 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
     <p class="note">Or write to us at <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a></p>
+    <a class="product" href="/risto/">
+      <img src="risto/zirvo-risto-logo.png" alt="" width="28" height="28">
+      <span><strong>Zirvo Risto</strong> · AI reservations for restaurants</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
   </main>
 
   <footer>
     <nav class="legal-links">
+      <a href="/risto/">Zirvo Risto</a>
       <a href="terms.html">Terms of Service</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="refunds.html">Refund Policy</a>
