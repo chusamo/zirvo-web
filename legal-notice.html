@@ -2,68 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Legal Notice — Zirvo</title>
   <meta name="description" content="Company information for Zirvo OÜ.">
-  <meta name="theme-color" content="#0B0F1A">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%236366F1'/><path d='M20 20h24L20 44h24' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
-  <link rel="stylesheet" href="legal.css">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/site.js" defer></script>
 </head>
 <body>
-  <header class="site">
-    <a href="/" class="logo" aria-label="Zirvo home">
-      <span class="logo-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h12L6 18h12"/></svg></span>
-      Zirvo
-    </a>
-    <a class="back" href="/">← Back to home</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__bar">
+      <a href="/" class="logo" aria-label="Zirvo home">
+        <span class="logo__tilt" aria-hidden="true">
+          <img class="logo__mark" src="/assets/zirvo-isotipo.png" alt="" width="31" height="31">
+          <span class="logo__name">Zirvo</span>
+        </span>
+      </a>
+      <nav class="site-header__nav" aria-label="Main">
+        <a class="btn btn--ghost btn--sm" href="/"><svg class="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 19l-7-7 7-7"/></svg>Back to home</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="legal">
-    <h1>Legal Notice</h1>
-    <p class="updated">Company information (Impressum)</p>
-
-    <div class="card">
-      <p><strong>Zirvo OÜ</strong><br>
-      Private limited company (osaühing) under Estonian law</p>
-      <p>Comerç 39<br>
-      08620 Sant Vicenç dels Horts, Barcelona<br>
-      Spain</p>
+  <main id="main" tabindex="-1">
+    <div class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">Legal Notice</h1>
+        <p class="updated chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/></svg>Company information (Impressum)</p>
+        <nav class="legal-tabs" aria-label="Legal documents">
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/refunds.html">Refund Policy</a>
+          <a href="/legal-notice.html" aria-current="page">Legal Notice</a>
+        </nav>
+      </div>
     </div>
 
-    <h2>Registration</h2>
-    <p>Estonian Commercial Register (e-Business Register), Registration Department of Tartu County Court<br>
-    Registry code: <strong>17611162</strong><br>
-    <a href="https://ariregister.rik.ee/eng/company/17611162" rel="noopener">View entry in the register</a></p>
+    <div class="container legal-layout">
+      <details class="toc" data-toc>
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ol>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#management-board">Management board</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact-person-in-estonia">Contact person in Estonia</a></li>
+            <li><a href="#vat">VAT</a></li>
+            <li><a href="#responsible-for-content">Responsible for content</a></li>
+            <li><a href="#dispute-resolution">Dispute resolution</a></li>
+          </ol>
+        </nav>
+      </details>
 
-    <h2>Management board</h2>
-    <p>Jesús Ramoneda Marin</p>
+      <article class="prose">
+        <div class="callout">
+          <p><strong>Zirvo OÜ</strong><br>
+          Private limited company (osaühing) under Estonian law</p>
+          <p>Comerç 39<br>
+          08620 Sant Vicenç dels Horts, Barcelona<br>
+          Spain</p>
+        </div>
 
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a><br>
-    Support: <a href="mailto:support@zirvo.ai">support@zirvo.ai</a></p>
+        <h2 id="registration">Registration</h2>
+        <p>Estonian Commercial Register (e-Business Register), Registration Department of Tartu County Court<br>
+        Registry code: <strong>17611162</strong><br>
+        <a href="https://ariregister.rik.ee/eng/company/17611162" rel="noopener">View entry in the register</a></p>
 
-    <h2>Contact person in Estonia</h2>
-    <p>JusTrust OÜ (registry code 16093920)<br>
-    Viru väljak 2, 10111 Tallinn, Estonia</p>
+        <h2 id="management-board">Management board</h2>
+        <p>Jesús Ramoneda Marin</p>
 
-    <h2>VAT</h2>
-    <p>Zirvo OÜ is not currently registered for VAT.</p>
+        <h2 id="contact">Contact</h2>
+        <p>Email: <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a><br>
+        Support: <a href="mailto:support@zirvo.ai">support@zirvo.ai</a></p>
 
-    <h2>Responsible for content</h2>
-    <p>Jesús Ramoneda Marin, address as above.</p>
+        <h2 id="contact-person-in-estonia">Contact person in Estonia</h2>
+        <p>JusTrust OÜ (registry code 16093920)<br>
+        Viru väljak 2, 10111 Tallinn, Estonia</p>
 
-    <h2>Dispute resolution</h2>
-    <p>Our services are offered to business customers only. We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+        <h2 id="vat">VAT</h2>
+        <p>Zirvo OÜ is not currently registered for VAT.</p>
+
+        <h2 id="responsible-for-content">Responsible for content</h2>
+        <p>Jesús Ramoneda Marin, address as above.</p>
+
+        <h2 id="dispute-resolution">Dispute resolution</h2>
+        <p>Our services are offered to business customers only. We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+      </article>
+    </div>
   </main>
 
-  <footer class="site">
-    <nav>
-      <a href="terms.html">Terms of Service</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="refunds.html">Refund Policy</a>
-      <a href="legal-notice.html">Legal Notice</a>
-    </nav>
-    © 2026 Zirvo OÜ · Registry code 17611162 · Estonia
+  <footer class="site-footer">
+    <div class="container site-footer__top">
+      <div class="site-footer__brand">
+        <a href="/" class="logo logo--sm" aria-label="Zirvo home">
+          <span class="logo__tilt" aria-hidden="true">
+            <img class="logo__mark" src="/assets/zirvo-isotipo.png" alt="" width="25" height="25">
+            <span class="logo__name">Zirvo</span>
+          </span>
+        </a>
+        <p class="site-footer__tagline">AI communication &amp; process automation</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div>
+          <h2 class="site-footer__title">Products</h2>
+          <ul class="footer-links">
+            <li><a href="/risto/">Zirvo Risto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Legal</h2>
+          <ul class="footer-links">
+            <li><a href="/terms.html">Terms of Service</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/refunds.html">Refund Policy</a></li>
+            <li><a href="/legal-notice.html" aria-current="page">Legal Notice</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="site-footer__legal">© <span data-year>2026</span> Zirvo OÜ · Registry code 17611162 · Estonia · <a href="mailto:hello@zirvo.ai">hello@zirvo.ai</a></p>
+    </div>
   </footer>
 </body>
 </html>
