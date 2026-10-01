@@ -34,11 +34,7 @@ header.site {
   font-weight: 800; font-size: 20px; letter-spacing: -0.02em;
   color: var(--text); text-decoration: none;
 }
-.logo-mark {
-  width: 32px; height: 32px; border-radius: 9px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  display: grid; place-items: center;
-}
+.logo-mark { width: 34px; height: 34px; display: block; }
 .back { color: var(--muted); text-decoration: none; font-size: 14px; }
 .back:hover { color: var(--text); }
 
