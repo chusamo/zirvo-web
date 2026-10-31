@@ -35,7 +35,7 @@
     <div class="page-hero">
       <div class="container">
         <h1 class="page-hero__title">Privacy Policy</h1>
-        <p class="updated chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Last updated: 1 October 2026</p>
+        <p class="updated chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Last updated: 30 October 2026</p>
         <nav class="legal-tabs" aria-label="Legal documents">
           <a href="/terms.html">Terms of Service</a>
           <a href="/privacy.html" aria-current="page">Privacy Policy</a>
@@ -105,6 +105,13 @@
 
         <h2 id="data-we-process-on-behalf-of-our-customers">4. Data we process on behalf of our customers</h2>
         <p>When restaurants and other businesses use Zirvo to manage bookings, calls or messages, we process data about their guests and callers (for example names, phone numbers, booking details, messages and call recordings or transcripts) <strong>on their behalf and according to their instructions</strong>. In that case the business is the controller and Zirvo is the processor. If you are a guest or caller, please contact the business you interacted with to exercise your rights; we will assist them.</p>
+        <h3 id="phone-assistant">Calls answered by the phone assistant</h3>
+        <ul>
+          <li><strong>You talk to an AI.</strong> When you call a business that uses the Zirvo phone assistant, an automated assistant answers and tells you so at the start of the call.</li>
+          <li><strong>What is kept:</strong> the audio is processed in real time to understand you and answer, and is not stored unless the business has turned call recording on, in which case you are told at the start of the call (and, in Germany, asked for your consent). A written transcript and a short summary of the call are kept to manage your booking or request, together with your phone number and the booking details you give.</li>
+          <li><strong>Purpose and legal basis:</strong> handling your booking or request at your request, Art. 6(1)(b) GDPR, and the business's legitimate interest in answering its phone and serving its guests well, Art. 6(1)(f) GDPR. You can object at any time; the assistant can pass you to the business's staff.</li>
+          <li><strong>How long:</strong> transcripts and summaries are deleted from Zirvo 90 days after the call, and from our voice provider after 30 days. Recordings, where enabled, are deleted after 30 days. Booking data stays with the business according to its own retention rules.</li>
+        </ul>
 
         <h2 id="cookies-and-tracking">5. Cookies and tracking</h2>
         <p>Our website currently does not use cookies, analytics or tracking tools, and our fonts are hosted on our own server, so no data is sent to third-party font or analytics providers. If this changes, we will update this policy and ask for your consent where required.</p>
@@ -121,7 +128,21 @@
             <tr role="row"><td role="cell" data-label="Provider">Stripe Payments Europe, Ltd.</td><td role="cell" data-label="Purpose">Payment processing</td><td role="cell" data-label="Location">Ireland (EU); some processing in the USA under appropriate safeguards</td></tr>
           </tbody>
         </table>
-        <p>Before our product processes customer data, the providers used for the product itself (such as cloud hosting, telephony, messaging and AI model providers) will be listed in this section and in our Data Processing Agreement.</p>
+        <p>For the Zirvo Risto product (bookings, phone assistant and booking pages) we also use:</p>
+        <table class="data-table" role="table">
+          <thead role="rowgroup">
+            <tr role="row"><th scope="col" role="columnheader">Provider</th><th scope="col" role="columnheader">Purpose</th><th scope="col" role="columnheader">Location</th></tr>
+          </thead>
+          <tbody role="rowgroup">
+            <tr role="row"><td role="cell" data-label="Provider">Contabo GmbH</td><td role="cell" data-label="Purpose">Application hosting and database</td><td role="cell" data-label="Location">Germany (EU)</td></tr>
+            <tr role="row"><td role="cell" data-label="Provider">ElevenLabs (Eleven Labs, Inc.)</td><td role="cell" data-label="Purpose">Phone assistant: speech recognition, voice and conversation handling, call transcripts</td><td role="cell" data-label="Location">USA (EU–US Data Privacy Framework / Standard Contractual Clauses)</td></tr>
+            <tr role="row"><td role="cell" data-label="Provider">Anthropic, PBC</td><td role="cell" data-label="Purpose">AI language models used by the assistants</td><td role="cell" data-label="Location">USA (EU–US Data Privacy Framework / Standard Contractual Clauses)</td></tr>
+            <tr role="row"><td role="cell" data-label="Provider">Twilio Inc.</td><td role="cell" data-label="Purpose">Telephony (phone numbers, call routing and, where enabled, call recording)</td><td role="cell" data-label="Location">USA (EU–US Data Privacy Framework / Standard Contractual Clauses)</td></tr>
+            <tr role="row"><td role="cell" data-label="Provider">Zadarma</td><td role="cell" data-label="Purpose">Telephony (phone numbers and call routing)</td><td role="cell" data-label="Location">EU</td></tr>
+            <tr role="row"><td role="cell" data-label="Provider">Cloudflare, Inc. (Turnstile)</td><td role="cell" data-label="Purpose">Protection of booking pages against bots and abuse</td><td role="cell" data-label="Location">USA (EU–US Data Privacy Framework / Standard Contractual Clauses); see the <a href="https://www.cloudflare.com/en-gb/turnstile-privacy-policy/" rel="noopener">Turnstile Privacy Addendum</a></td></tr>
+          </tbody>
+        </table>
+        <p>The same providers are listed in our Data Processing Agreement with the businesses that use Zirvo.</p>
 
         <h2 id="international-transfers">7. International transfers</h2>
         <p>Where personal data is transferred outside the European Economic Area, we ensure an adequate level of protection, for example through an adequacy decision of the European Commission (including the EU–US Data Privacy Framework) or Standard Contractual Clauses.</p>
@@ -131,6 +152,7 @@
           <li><strong>Emails and enquiries:</strong> as long as needed to handle them, and up to 2 years after the last contact.</li>
           <li><strong>Customer account data:</strong> for the duration of the contract, then deleted within 30 days after the end of the export period, unless the law requires longer retention.</li>
           <li><strong>Invoices and accounting records:</strong> for the period required by accounting law (in Estonia, generally 7 years).</li>
+          <li><strong>Phone assistant calls:</strong> transcripts and summaries 90 days after the call (30 days at our voice provider); recordings, where enabled, 30 days.</li>
           <li><strong>Server logs:</strong> for a short period as determined by our hosting provider for security purposes.</li>
         </ul>
 
